@@ -13,14 +13,11 @@ function love.draw()
       -- Tela x-800 y-600
       -- love.graphics.print(centro_x) --400
       -- love.graphics.print(centro_y) --300
-
-      function love.draw()
-            drawSemiCircle(150, 200, -100, -50, 30, (math.pi / 180) * (-90), (math.pi / 180) * 95)
-            drawSemiCircle(250, 200, 100, 50, 30, (math.pi / 180) * 90, (math.pi / 180) * (-95))
-            drawSemiCircle(200, 150, 50, 100, 30, (math.pi / 180) * 0, (math.pi / 180) * (-186))
-            drawSemiCircle(200, 250, -50, -100, 30, (math.pi / 180) * 0, (math.pi / 180) * (-186))
-            love.graphics.circle("line", 200, 200, 50)
-      end
+      drawSemiCircle(150, 200, -100, -50, 30, (math.pi / 180) * (-90), (math.pi / 180) * 95)
+      drawSemiCircle(250, 200, 100, 50, 30, (math.pi / 180) * 90, (math.pi / 180) * (-95))
+      drawSemiCircle(200, 150, 50, 100, 30, (math.pi / 180) * 0, (math.pi / 180) * (-186))
+      drawSemiCircle(200, 250, -50, -100, 30, (math.pi / 180) * 0, (math.pi / 180) * (-186))
+      love.graphics.circle("line", 200, 200, 50)
 end
 
 function drawSemiCircle(centerX, centerY, radiusX, radiusY, segments, angleStart, angleEnd)
