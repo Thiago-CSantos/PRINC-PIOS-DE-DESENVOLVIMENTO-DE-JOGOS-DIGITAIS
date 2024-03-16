@@ -1,3 +1,4 @@
+---@diagnostic disable: redundant-value
 local lg = love.graphics
 local angulo = 0
 local x, y = 400, 300
