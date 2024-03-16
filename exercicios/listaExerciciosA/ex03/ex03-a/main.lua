@@ -1,10 +1,10 @@
----@diagnostic disable: lowercase-global
+---@diagnostic disable: lowercase-global, deprecated
 function love.load()
       controlPoints = {
             { 100, 150 }, -- Ponto inicial
-            { 80, 200 }, -- Ponto de controle 1
+            { 80,  200 }, -- Ponto de controle 1
             { 100, 250 }, -- Ponto de controle 2
-            { 150, 300 } -- Ponto final
+            { 150, 300 }  -- Ponto final
       }
 
       curvePoints = {} -- Array para armazenar os pontos da curva
@@ -21,58 +21,57 @@ function love.draw()
       -- Desenhar a curva de Bézier cúbica
       love.graphics.line(curvePoints)
 
-      curva = love.math.newBezierCurve(150,300, 200,310, 250,310, 300,300)
-      love.graphics.line(curva:render())
-      
-      curva = love.math.newBezierCurve(300,300, 360,250, 360,200, 350,150)
+      curva = love.math.newBezierCurve(150, 300, 200, 310, 250, 310, 300, 300)
       love.graphics.line(curva:render())
 
-      curva = love.math.newBezierCurve(350,150, 350,140, 320,110, 300,100)
+      curva = love.math.newBezierCurve(300, 300, 360, 250, 360, 200, 350, 150)
       love.graphics.line(curva:render())
-      
-      curva = love.math.newBezierCurve(300,100, 290,80, 250,50)
+
+      curva = love.math.newBezierCurve(350, 150, 350, 140, 320, 110, 300, 100)
       love.graphics.line(curva:render())
-      
-      curva = love.math.newBezierCurve(250,50, 225,40, 200,50)
+
+      curva = love.math.newBezierCurve(300, 100, 290, 80, 250, 50)
       love.graphics.line(curva:render())
-      
-      curva = love.math.newBezierCurve(200,50, 175,60, 150,100)
+
+      curva = love.math.newBezierCurve(250, 50, 225, 40, 200, 50)
       love.graphics.line(curva:render())
-      
-      curva = love.math.newBezierCurve(150,100, 125,115, 100,150)
+
+      curva = love.math.newBezierCurve(200, 50, 175, 60, 150, 100)
+      love.graphics.line(curva:render())
+
+      curva = love.math.newBezierCurve(150, 100, 125, 115, 100, 150)
       love.graphics.line(curva:render())
 
       love.graphics.setColor(1, 0, 0) -- Define a cor para vermelho
-      love.graphics.setPointSize(10)    -- Define o tamanho do ponto
+      love.graphics.setPointSize(10)  -- Define o tamanho do ponto
       love.graphics.points(100, 150)
 
       love.graphics.setPointSize(10)
-      love.graphics.points(110,250)
-      
-      love.graphics.setPointSize(10)
-      love.graphics.points(150,298)
+      love.graphics.points(110, 250)
 
       love.graphics.setPointSize(10)
-      love.graphics.points(300,300)
+      love.graphics.points(150, 298)
 
       love.graphics.setPointSize(10)
-      love.graphics.points(340,250)
+      love.graphics.points(300, 300)
 
       love.graphics.setPointSize(10)
-      love.graphics.points(350,150)
+      love.graphics.points(340, 250)
 
       love.graphics.setPointSize(10)
-      love.graphics.points(300,100)
+      love.graphics.points(350, 150)
 
       love.graphics.setPointSize(10)
-      love.graphics.points(250,50)
+      love.graphics.points(300, 100)
 
       love.graphics.setPointSize(10)
-      love.graphics.points(200,50)
+      love.graphics.points(250, 50)
 
       love.graphics.setPointSize(10)
-      love.graphics.points(150,100)
+      love.graphics.points(200, 50)
 
+      love.graphics.setPointSize(10)
+      love.graphics.points(150, 100)
 end
 
 function calculateBezierCurve(controlePonto)
